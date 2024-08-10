@@ -3,7 +3,7 @@
   <head>
     <title>An example of vue-draggable-virtual-scroll-list</title>
     <script src="https://unpkg.com/vue@2.6.11"></script>
-    <script src="https://cdn.rawgit.com/Marak/faker.js/v4.1.0/examples/browser/js/faker.min.js"></script>
+    <!-- <script src="https://cdn.rawgit.com/Marak/faker.js/v4.1.0/examples/browser/js/faker.min.js"></script> -->
     <script src="../dist/bundle.js"></script>
     <style>
       html {
@@ -96,7 +96,7 @@
 
       <section class="example">
         <h2>Two Lists</h2>
-        <div class="container">
+        <!-- <div class="container">
           <draggable-virtual-list
             class="phrase-list"
             group="phrase-list"
@@ -120,7 +120,7 @@
             :data-component="Item"
           >
           </draggable-virtual-list>
-        </div>
+        </div> -->
       </section>
     </div>
 
@@ -146,7 +146,7 @@
           { length },
           (_, id) => ({
             id: prefix ? `${prefix}-${id}` : id + '',
-            content: `${id}：${faker.name.findName()}`
+            content: `${id}: {}_11`
           }));
       }
 
@@ -159,8 +159,8 @@
           return {
             items: generateItems(10000),
             // Make sure that elements of two lists have unique ids.
-            items2: generateItems(500, 'lhs-'),
-            items3: generateItems(100, 'rhs-'),
+            // items2: generateItems(500, 'lhs-'),
+            // items3: generateItems(100, 'rhs-'),
             Item
           }
         },
